@@ -37,28 +37,6 @@ npm start
 
 The project's directory structure is organized as follows:
 
-photography-portfolio/
-├── public/
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   └── script.js
-│   ├── images/
-│   │   └── ...
-│   └── index.html
-├── src/
-│   ├── controllers/
-│   │   └── ...
-│   ├── models/
-│   │   └── ...
-│   ├── routes/
-│   │   └── ...
-│   └── server.js
-├── .env
-├── package.json
-├── README.md
-└── ...
-
 - The public directory contains the static files, including CSS stylesheets, JavaScript files, and images used in the frontend.
 - The src directory contains the server-side code, including controllers, models, routes, and the main server file.
 - The .env file is used to store environment-specific configurations.
