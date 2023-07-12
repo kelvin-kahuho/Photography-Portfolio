@@ -14,7 +14,7 @@ This project is a photography portfolio website that showcases your photography 
 
 1. Clone the repo
 
-git clone https://github.com/your-username/photography-portfolio.git
+git clone https://github.com/kelvin-kahuho/photography-portfolio.git
 
 2. Install the dependencies
 
