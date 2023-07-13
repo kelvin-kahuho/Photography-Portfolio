@@ -1,0 +1,36 @@
+body {
+    min-height: 100vh;
+    background-image: url('images/Landscapes/_D855801.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    padding: 20px 100px 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: transparent;
+}
+
+.logo {
+    font-size: 32px;
+    color: aliceblue;
+    text-decoration: double;
+    font-weight: 700;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #000000;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 50px;
+    
+}
