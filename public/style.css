@@ -1,9 +1,5 @@
 body {
     min-height: 100vh;
-    background-image: url('images/Landscapes/_D855801.jpg');
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .header {
@@ -20,10 +16,11 @@ body {
 }
 
 .logo {
-    font-size: 32px;
-    color: aliceblue;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
     text-decoration: double;
     font-weight: 700;
+    font-style: italic;
 }
 
 .navbar a {
@@ -48,19 +45,12 @@ body {
 
 .gallery {
     margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 images per row*/
+    grid-gap: 15px; /* Adjust the gap between images*/
 }
 
 .gallery img {
-    width: calc(33.33% - 10px);
+    width: 100%;
     height: auto;
-}
-
-.city-scapes,
-.family-shoots,
-.holiday {
-  width: calc(33.33% - 10px);
 }
