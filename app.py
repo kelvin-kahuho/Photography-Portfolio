@@ -1,8 +1,19 @@
 #Import necessary modules from Flask framework
 from flask import Flask, render_template
+import mysql.connector
 
 #Initialize the Flask Application
 app = Flask(__name__)
+
+#Database connection configuration
+def get_db_connection():
+    conn = mysql.connector.connect(
+        host='localhost',
+        user='root'
+        password='heartattack2023',
+        database='Photography'
+    )
+    return conn
 
 #Defining routes
 
