@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header class="header">
+        <a href="/" class="logo">
+            <img src="{{ url_for('static', filename='AK_logo.png') }}" alt="logo">
+        </a>
+
+        <nav class="navbar">
+            <a href="/">Home</a>
+            <div class="dropdown">Gallery
+                <div class="dropdown-content">
+                    <a href="#">Portfolio</a>
+                    <a href="#">Abstracts</a>
+                    <a href="#">City Scapes</a>
+                    <a href="#">Events</a>
+                    <a href="#">Family Shoots</a>
+                    <a href="#">Holiday Shoots</a>
+                    <a href="#">Landscapes</a>           
+                    <a href="#">Portraits</a>
+                    <a href="#">Sea Scapes</a>
+                    <a href="#">Wildlife</a>
+                </div>                
+            </div>            
+            <a href="#">About</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </header>
+
+    {% block content %}
+
+
+    {% endblock content%}
+
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
