@@ -1,6 +1,6 @@
 # Photography Portfolio
 
-This project is a photography portfolio website that showcases your photography work. It utilizes Express.js as the backend framework to handle server-side logic and serves static files, while the frontend is built using HTML, CSS, and JavaScript. The website allows you to display your photographs in an organized manner and provides a user-friendly interface for visitors to browse and explore your portfolio.
+This project is a photography portfolio website that showcases your photography work. It utilizes Flask as the backend framework to handle server-side logic and serves static files, while the frontend is built using HTML, CSS, and JavaScript. The website allows you to display your photographs in an organized manner and provides a user-friendly interface for visitors to browse and explore your portfolio.
 
 # Features
 
@@ -18,29 +18,14 @@ git clone https://github.com/kelvin-kahuho/photography-portfolio.git
 
 2. Install the dependencies
 
-npm install
+pip install -r requirments.txt
 
-3. Set up the environmental variables:
+3. Start the application:
 
-- Create a .env file in the root directory.
-- Define the following variables:
-        PORT - The port number on which the server will run (e.g., 3000).
-        DATABASE_URL - The connection URL for your database (e.g., MongoDB Atlas URL).
+python app.py
 
-4. Start the application:
+4. Open your browser and visit http://localhost:3000 (or the port you specified) to access the photography portfolio website.
 
-npm start
-
-5. Open your browser and visit http://localhost:3000 (or the port you specified) to access the photography portfolio website.
-
-6. Project Structure
-
-The project's directory structure is organized as follows:
-
-- The public directory contains the static files, including CSS stylesheets, JavaScript files, and images used in the frontend.
-- The src directory contains the server-side code, including controllers, models, routes, and the main server file.
-- The .env file is used to store environment-specific configurations.
-- The package.json file holds the project's metadata and dependencies.
 
 # Contributing
 
