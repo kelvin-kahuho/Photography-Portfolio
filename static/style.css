@@ -1,9 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 body {
     min-height: 100vh;
+    font-size: 16px;
 }
 
 .header {
-    position:absolute;
+    position:fixed;
     top: 0;
     left: 0;
     width: 90%;
@@ -29,7 +34,7 @@ body {
     color: #000000;
     font-weight: 500;
     text-decoration: none;
-    padding: 30px;
+    padding: 20px;
     
 }
 
@@ -39,7 +44,7 @@ body {
     color: #000000;
     font-weight: 500;
     text-decoration: none;
-    padding: 30px;
+    padding: 20px;
 }
 
 
@@ -67,14 +72,65 @@ body {
     background-color: #f1f1f1;
   }
 
+/*Common edits for most containers throughout the app*/
+.container-1 {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+    background-image: url("/static/slider/D85_3354.jpg");
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+/*Carousel-container styling in the home page*/
+
+.carousel-container {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+.carousel-slider {
+    display: flex;
+    transition: transform 1s ease;
+  }
+
+.carousel-slide {
+    min-width: 100%;
+    max-height: 100%;
+  }
+  
+.carousel-slide img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+/* Optional: Adjust the size of the carousel */
+@media (max-width: 600px) {
+    .carousel-slide {
+      min-width: 100%;
+    }
+  }
+  
+@media (min-width: 601px) and (max-width: 800px) {
+    .carousel-slide {
+      min-width: 50%;
+    }
+  }
+
 
 #video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 500%;
+    object-fit: contain;
     z-index: -1;
     margin-top: 70px;
   }
@@ -90,3 +146,58 @@ body {
     width: 100%;
     height: auto;
 }
+
+
+/* css code for form to upload image */
+.upload-form {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    border: #ffffff solid 2px;
+    padding: 50px;
+    background-color: antiquewhite;
+    opacity: 75%;
+    border-radius: 5%;
+  }
+
+form h3{
+    margin-bottom: 30px;
+    text-align: center;
+}
+  
+form label {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+textarea, select, input{
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+button {
+    width: 100px;
+    height: 60px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #428bca;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-content: center;
+  }
+  
+button:hover {
+    background-color: #3071a9;
+  }
