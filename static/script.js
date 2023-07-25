@@ -1,16 +1,22 @@
-// Function to switch between categories
-function switchCategory(categoryIndex) {
-    const carousels = document.getElementsByClassName('carousel');
-    const buttons = document.getElementsByTagName('button');
-  
-    // Hide all carousels and remove active class from buttons
-    for (let i = 0; i < carousels.length; i++) {
-      carousels[i].style.display = 'none';
-      buttons[i].classList.remove('active');
-    }
-  
-    // Show the selected carousel and add active class to the corresponding button
-    carousels[categoryIndex - 1].style.display = 'block';
-    buttons[categoryIndex - 1].classList.add('active');
+document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.querySelector('.carousel-slider');
+  const slides = document.querySelectorAll('.carousel-slide');
+  let slideIndex = 0;
+
+  // Function to show the current slide
+  function showSlide(index) {
+    slider.style.transform = `translateX(-${index * 100}%)`;
   }
-  
+
+  // Function to handle the automatic slideshow
+  function autoSlide() {
+    slideIndex++;
+    if (slideIndex >= slides.length) {
+      slideIndex = 0;
+    }
+    showSlide(slideIndex);
+  }
+
+  // Start the automatic slideshow every 3 seconds (adjust the interval as needed)
+  setInterval(autoSlide, 5000);
+});
