@@ -4,11 +4,13 @@ This project is a photography portfolio website that showcases your photography 
 
 # Features
 
-1. Display a collection of photographs organized in different categories or albums.
-2. Each photograph can be viewed individually in a larger size or within a gallery.
-3. Provide a description or caption for each photograph to provide context or additional information.
-4. Implement a contact form to allow visitors to get in touch with you for inquiries or bookings.
-5. Incorporate a responsive design to ensure optimal viewing experience across different devices.
+1. Contains a Portal where an admin can upload photos
+![Alt text](screenshots/image.png)
+2. Display a collection of photographs organized in different categories or albums.
+3. Each photograph can be viewed individually in a larger size or within a gallery.
+4. Provide a description or caption for each photograph to provide context or additional information.
+5. Implement a contact form to allow visitors to get in touch with you for inquiries or bookings.
+6. Incorporate a responsive design to ensure optimal viewing experience across different devices.
 
 # Installation
 
