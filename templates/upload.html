@@ -4,7 +4,7 @@
 <div class="container-1">
     <p class="success">{{ success }}</p>
     <div class="upload-form">
-        <form action="{{ url_for('image_upload') }}" method="POST">
+        <form action="{{ url_for('image_upload') }}" method="POST" enctype="multipart/form-data">
 
             <h3>Upload Image</h3>
 
@@ -18,13 +18,14 @@
             <div class="caption">
     
                 <label for="caption">Caption:</label><br>
-                <textarea name="caption" id="caption" cols="30" rows="5" required maxlength="50" minlength="15"></textarea>
+                <textarea name="caption" id="caption" cols="30" rows="5" required maxlength="50" minlength="10"></textarea>
 
             </div>
 
             <div>
                 <label for="category">Category</label><br>
                 <select name="category" id="category">
+                    <option value=""> Select Category</option>
                     {% for category in categories %}
                     <option value="{{ category[0] }}">{{ category[1] }}</option>
                     {% endfor %}
