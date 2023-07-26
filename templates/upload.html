@@ -2,6 +2,7 @@
 {% block content %}
 
 <div class="container-1">
+    <p class="success">{{ success }}</p>
     <div class="upload-form">
         <form action="{{ url_for('image_upload') }}" method="POST">
 
@@ -10,7 +11,7 @@
 
             <div class="upload-image">
     
-                <input type="file" id="image" name="image" required>
+                <input type="file" id="image" name="image" accept="image/*" required>
     
             </div>
     
@@ -24,9 +25,9 @@
             <div>
                 <label for="category">Category</label><br>
                 <select name="category" id="category">
-                    <option value="Abstracts">Abstracts</option>
-                    <option value="City-scapes">City Scapes</option>
-                    <option value="Sea-Scapes">Sea Scapes</option>
+                    {% for category in categories %}
+                    <option value="{{ category[0] }}">{{ category[1] }}</option>
+                    {% endfor %}
                 </select>
             </div>
     
