@@ -203,6 +203,7 @@ button:hover {
 
 /*Class success*/
 .success {
+    margin-top: 140px;
     color: red;
     text-align: center;
 }
