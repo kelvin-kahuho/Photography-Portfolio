@@ -35,7 +35,7 @@ Contributions to the photography portfolio project are welcome! If you encounter
 
 # License
 
-This project is licensed under the MIT License. Feel free to modify and use the code according to your needs.
+This project is licensed under the MIT License. Feel free to modify and use the code according to your needs. The software product is not for commercial purposes.
 
 # Contact
 
