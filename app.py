@@ -20,29 +20,41 @@ def get_db_connection():
     )
     return conn
 
+#Method to get categories information from db
+def category():
+
+    #Get database connection
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    # Retrieve the Category information from the database
+    cursor.execute('SELECT * FROM Category')
+    categories = cursor.fetchall()
+    conn.close()
+
+    return categories
+
+
 #Defining routes
 
 #Route to serve static files- css files and images
-app.route('/static/<path:filename>')
+@app.route('/static/<path:filename>')
 def static_files(filename):
     return app.send_static_file(filename)
 
 #Home route
 @app.route('/')
 def home():
-    return render_template('home.html')
+    #fetch categories
+    categories = category()
+
+    return render_template('home.html', categories=categories)
 
 #Route for image upload
 @app.route('/upload', methods =['POST', 'GET'])
 def image_upload():
-    conn = get_db_connection()
-    cursor = conn.cursor()
-
-    # Retrieve the student information from the database
-    query = "SELECT * FROM  Category"
-    cursor.execute(query)
-    categories = cursor.fetchall()
-    conn.close()
+    #categories
+    categories = category()
 
     if request.method == 'POST':
         photo = request.files['image']
@@ -73,7 +85,27 @@ def image_upload():
     else:
         return render_template('upload.html', categories=categories)
 
+#Route to display photos
+@app.route('/gallery/<int:category_id>')
+def gallery(category_id):
 
+    #categories
+    categories = category()
+    
+    #Get Database Connection
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    #Execute image query from specific category
+    images_query= "SELECT * FROM Image WHERE category_id = %s" 
+    cursor.execute(images_query, (category_id,))
+    images = cursor.fetchall()
+    category_name_query = "SELECT * FROM Category WHERE id = %s"
+    cursor.execute(category_name_query, (category_id,))
+    category_name = cursor.fetchone()
+    conn.close()
+
+    return render_template('gallery.html', images=images, categories=categories, category_name=category_name)
 
 
 #run the flask app
