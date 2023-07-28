@@ -17,16 +17,9 @@
             <a href="/">Home</a>
             <div class="dropdown">Gallery
                 <div class="dropdown-content">
-                    <a href="#">Portfolio</a>
-                    <a href="#">Abstracts</a>
-                    <a href="#">City Scapes</a>
-                    <a href="#">Events</a>
-                    <a href="#">Family Shoots</a>
-                    <a href="#">Holiday Shoots</a>
-                    <a href="#">Landscapes</a>           
-                    <a href="#">Portraits</a>
-                    <a href="#">Sea Scapes</a>
-                    <a href="#">Wildlife</a>
+                    {% for category in categories %}
+                    <a href="{{ url_for('gallery', category_id= category[0]) }}">{{ category[1] }}</a>
+                    {% endfor %}
                 </div>                
             </div>            
             <a href="#">About</a>
