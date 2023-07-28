@@ -1,48 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="/public/style.css">
-</head>
-<body>
-    <header class="header">
-        <a href="#" class="logo">Logo</a>
+{% extends 'main.html' %}
+{% block content %}
 
-        <nav class="navbar">
-            <a href="public/home.html">Home</a>
-            <a href="#">About</a>
-            <a href="portfolio.html">Portfolio</a>
-            <div class="dropdown">Gallery
-                <div class="dropdown-content">
-                    <a href="categories/abstracts.html">Abstracts</a>
-                    <a href="categories/city-scapes.html">City Scapes</a>
-                    <a href="categories/events.html">Events</a>
-                    <a href="categories/family-shoots.html">Family Shoots</a>
-                    <a href="categories/holiday-shoots.html">Holiday Shoots</a>
-                    <a href="categories/land-scapes.html">Landscapes</a>           
-                    <a href="categories/portraits.html">Portraits</a>
-                    <a href="categories/sea-scapes.html">Sea Scapes</a>
-                    <a href="categories/wildlife.html">Wildlife</a>
-                </div>                
-            </div>            
-            <a href="#">Contact Us</a>
-        </nav>
-    </header>
+    <h1 class="category-title">{{ category_name[1] }}</h1>
 
-    <div class="gallery">
+        {% if images %}
+        <div class="gallery">
+                
+            {% for image in images %}
 
-        <img src="images/Abstracts/Buffalo and Impala Skeleton-2.jpg" alt="">
-        <img src="images/Abstracts/Buffalo Skull 2.jpg" alt="">
-        <img src="images/Abstracts/Buffalo Skull full-2.jpg" alt="">
-        <img src="images/Abstracts/Buffalo Skull.jpg" alt="">
-        <img src="images/Abstracts/Elephant Skull_.jpg" alt="">
-        <img src="images/Abstracts/Impala Skull.jpg" alt="">
-        <img src="images/Abstracts/Jaw-2.jpg" alt="">
+            <img src="{{ url_for('static', filename='Images/' + image[1]) }}" alt="">
 
-    </div>
+            {% endfor %}
+        </div>
 
-    
-</body>
-</html>
+        {% else %}
+
+        <h2 class="no-image">No Images available at the moment!</h2>
+
+        {% endif %}
+
+{% endblock content %}
