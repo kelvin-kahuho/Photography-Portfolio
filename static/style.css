@@ -73,6 +73,10 @@ body {
     background-color: #f1f1f1;
   }
 
+.container {
+  margin: 10px;
+}
+
 /*Common edits for most containers throughout the app*/
 .container-1 {
     width: 100%;
