@@ -73,9 +73,6 @@ body {
     background-color: #f1f1f1;
   }
 
-.container {
-  margin: 10px;
-}
 
 /*Common edits for most containers throughout the app*/
 .container-1 {
@@ -204,7 +201,8 @@ button:hover {
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 images per row*/
-  grid-gap: 15px; /* Adjust the gap between images*/
+  grid-gap: 10px; /* Adjust the gap between images*/
+  margin: 15px;
 }
 
 .gallery img {
