@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='admin.css') }}">
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="nav-bar">
+            
+            <a href="#" class="logo">
+                <img src="{{ url_for('static', filename='AK_logo.png') }}" alt="logo">
+            </a>
+
+            <a href="{{ url_for('admin_dashboard') }}">
+
+                <lord-icon
+                    src="https://cdn.lordicon.com/gmzxduhd.json"
+                    trigger="hover"
+                    colors="primary:#121331,secondary:#08a88a"
+                    style="width:50px;height:50px">
+                </lord-icon>
+                <p>Dashboard</p>
+
+            </a>
+
+            <a href="{{ url_for('add_category') }}">
+
+                <lord-icon
+                    src="https://cdn.lordicon.com/wloilxuq.json"
+                    trigger="hover"
+                    colors="primary:#121331,secondary:#08a88a"
+                    stroke="55"
+                    state="hover-1"
+                    style="width:50px;height:50px">
+                </lord-icon>
+                <p>Edit</p>
+            
+            </a>
+
+            <a href="#">
+                
+                <lord-icon
+                    src="https://cdn.lordicon.com/fgkmrslx.json"
+                    trigger="hover"
+                    colors="primary:#121331,secondary:#08a88a"
+                    style="width:50px;height:50px">
+                </lord-icon>
+                <p>View Items</p>
+
+            </a>
+
+            <a href="#">
+            
+                <lord-icon
+                    src="https://cdn.lordicon.com/dxjqoygy.json"
+                    trigger="hover"
+                    colors="primary:#121331,secondary:#08a88a"
+                    style="width:50px;height:50px">
+                </lord-icon>
+                <p>Profile</p>
+
+            </a>
+
+
+        </div>
+
+
+
+        <div class="content-container">
+
+            {% block content %}
+
+
+            {% endblock content %}
+
+        </div>
+
+
+
+    </div>
+    
+</body>
+</html>
