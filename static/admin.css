@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Styling for erros*/
+.error {
+    color: red;
+}
+
+/* Styling the admin login page*/
+.login-container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/static/slider/D85_8157.jpg");
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.login-container form{
+    display: flex;
+    flex-direction: column;
+    border: solid rgb(53, 51, 51) 2px;
+    padding: 70px;
+
+}
+
+.login-container h1{
+    margin: 10px;
+}
+
+.login-container input{
+    border: none;
+    border-bottom: solid 2px aqua;
+    color: rgb(0, 0, 0);
+    background: transparent;
+    width: 150px;
+    height: 50px;
+    margin: 20px;
+
+}
+
+.login-container button{
+    background-color: aqua;
+    color: black;
+    height: 30px;
+    width: 100px;
+    margin: 20px;
+    border: none;
+
+}
+
+
+/* Styling the admin dashboard page*/
+
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    background-color:bisque;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-bar {
+    width: 10%;
+    height: 50%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    text-decoration: none;    
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+
+}
+.nav-bar a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+
+}
+
+.content-container {
+    width: 90%;
+    height: 100%;
+    background-image: url("/static/slider/D85_3354.jpg");
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;  
+}
+
+
+/*Common edits for most containers throughout the app*/
+.container-1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* css code for form to upload image */
+
+.container-1 form {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    border: #ffffff solid 2px;
+    padding: 50px;
+    background-color: antiquewhite;
+    opacity: 75%;
+    border-radius: 5%;
+  }
+
+.container-1 h3{
+    margin-bottom: 30px;
+    text-align: center;
+}
+  
+.container-1 label {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+.container-1 input{
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+.container-1 button {
+    width: 100px;
+    height: 60px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #428bca;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+.container-1 button:hover {
+    background-color: #3071a9;
+  }
+
+/*Class success*/
+.success {
+    margin: 20px;
+    color: red;
+    text-align: center;
+}
