@@ -3,6 +3,8 @@
 
 <div class="container-1">
     <p class="success">{{ success }}</p>
+    <p class="success">{{ error }}</p>
+    <p class="success">{{ message }}</p>
     <div class="upload-form">
         <form action="{{ url_for('image_upload') }}" method="POST" enctype="multipart/form-data">
 
@@ -30,6 +32,7 @@
                     <option value="{{ category[0] }}">{{ category[1] }}</option>
                     {% endfor %}
                 </select>
+
             </div>
     
             <div class="submit-button">
@@ -39,7 +42,13 @@
             </div>
             
         </form>
+        <button><a href="{{ url_for('add_category') }}" style="text-decoration: none;">Add category</a></button>
+
+        
+
+
     </div>
+    
 </div>
 
 
