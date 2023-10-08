@@ -13,8 +13,8 @@ app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 #Database connection configuration
 def get_db_connection():
     conn = mysql.connector.connect(
-        host='localhost',
-        user='root',
+        host='192.168.0.105',
+        user='kelvin',
         password='heartattack2023',
         database='Photography'
     )
@@ -177,4 +177,5 @@ def admin_dashboard():
 
 #run the flask app
 if __name__ == '__main__':
-    app.run( host="0.0.0.0", port=5000)
+<<<<<<< HEAD
+    app.run(host='0.0.0.0',port=5000)
