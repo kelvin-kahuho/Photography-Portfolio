@@ -1,0 +1,31 @@
+{% extends 'main_admin.html' %}
+{% block content %}
+
+<div class="container-1">
+
+    <p class="error">{{ error }}</p>
+    <p class="error">{{ message }}</p>
+    
+    <form action="{{ url_for('add_category') }}" class="add_category" method="POST" enctype="multipart/form-data">
+        
+        <h3>Add Category</h3>
+
+        <div>
+
+            <label for="category_name">Category Name:</label><br>
+            <input type="text" name="category_name" id="category_name">
+
+        </div>
+
+        
+        <div class="submit-button">
+
+            <button type="submit">Add Category</button>
+
+        </div>
+
+    </form>
+
+</div>
+
+{% endblock content %}
